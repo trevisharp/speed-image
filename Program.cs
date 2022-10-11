@@ -37,6 +37,15 @@ void process()
     unsafe
     {
         byte* p = (byte*)data.Scan0.ToPointer();
+
+        //get pixel em x y
+        //p[x + y * stride]
+
+        //set pixel em x y
+        //p[x + y * stride + 0] = B
+        //p[x + y * stride + 1] = G
+        //p[x + y * stride + 2] = R
+
         for (int j = 0; j < data.Height; j++)
         {
             byte* l = p + j * data.Stride;
